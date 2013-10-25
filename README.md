@@ -1,3 +1,3 @@
 Youtube Video Client
 =====================
-Busca, visualiza y descarga videos de Youtube. 
+Search and Download Youtube Videos 
