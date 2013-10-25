@@ -31,7 +31,6 @@
 			<% 
 			_.each(videos, function(video, key){
 				video = new Video(video);
-				Youtube.videos.add(video)
 			%>
 				<div class="video">
 					<div class="image"><a href=""><img src="<%=video.getImage() %>" /></a></div>

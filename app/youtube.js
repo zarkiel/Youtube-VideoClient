@@ -18,8 +18,7 @@ var Youtube = {
 		
 		Backbone.history.start();
 	},
-	videos: new VideoCollection(),
-	
+
 	currentPage: 1,
 	perPage: 10,
 	

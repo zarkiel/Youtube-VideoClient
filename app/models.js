@@ -1,6 +1,5 @@
 var Video = Backbone.Model.extend({
 	initialize: function(data){
-		console.log(data)
 		this.data = data;
 	},
 	
@@ -33,10 +32,5 @@ var Video = Backbone.Model.extend({
 	getViews: function(){
 		return this.data['yt$statistics'].viewCount;
 	},
-	
-	
-});
 
-var VideoCollection = Backbone.Collection.extend({
-	model: Video
 });
