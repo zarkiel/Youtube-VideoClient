@@ -1,0 +1,126 @@
+.inline(){
+    display: inline-block;
+}
+
+.align_center(){
+    text-align: center;
+}
+
+body {
+    
+    font-family: Arial;
+    font-size: 12px;
+    
+    a{
+        color: #004080;
+    }
+    
+    #wrapper{
+        
+        width: 700px;
+        margin: 10px auto;
+        border: 1px solid #D9E0E7;
+        #searchForm{
+            background: #F0F1F2;
+            padding: 5px 5px;
+        }
+        
+        #watchVideo{
+            display: none;
+            position: fixed;
+            top: 10px;
+            border: 3px solid #D9E0E7;
+            background: #fff;
+            width: 700px;
+            padding: 0 20px 20px 20px;
+            
+            .close{
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                padding: 5px 10px;
+                background: #F0F1F2;
+                border-left: 1px solid #D9E0E7;
+                border-bottom: 1px solid #D9E0E7;
+                cursor: pointer;
+                font-weight: bold;
+                
+                &:hover{
+                    background: #fff;
+                }
+            }
+            
+            h2.title{
+                .align_center;    
+            }
+            
+            .player{
+                padding: 0 10px;
+                iframe{
+                    width: 100%;
+                }
+            }
+            
+            .info{
+                margin-top: 10px;
+                .description{
+                    .inline;
+                    width: 450px;
+                    vertical-align: top;
+                }
+                
+                .download-links{
+                    .inline;
+                    width: 170px;
+                    vertical-align: top;
+                    margin-left: 30px;
+                    
+                    a{
+                        font-size: 11px;
+                    }
+                }
+                
+                span{
+                    font-weight: bold;
+                    display: block;
+                }
+            }
+        }
+        
+        #videoResults{
+            .video{
+                padding: 10px;
+                margin-bottom: 10px;
+                .image{
+                    .inline;
+                    .align_center();
+                    width: 190px;
+                    img{
+                        width: 185px;
+                    }
+                }
+                
+                .info{
+                    .inline;
+                    width: 470px;
+                    margin-left: 5px;
+                    vertical-align: top;
+                    .title{
+                        a{
+                            font-weight: bold;
+                        }
+                    }
+                    
+                    .metadata{
+                        font-size: 12px;
+                        
+                        .author{
+                            color: #000;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

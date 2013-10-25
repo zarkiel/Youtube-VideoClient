@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="css/index.css" rel="stylesheet" type="text/css" />
+		
+		<script src="js/jquery-1.9.1.js"></script>
+		<script src="js/moment-with-langs.min.js"></script>
+		<script src="js/underscore.js"></script>
+		<script src="js/backbone.js"></script>
+		
+		<script src="app/views.js"></script>
+		<script src="app/models.js"></script>
+		
+		<script src="app/application.js"></script>
+		<script src="app/router.js"></script>
+		
+		<script src="app/youtube.js"></script>
+	</head>
+	<body>
+		<script type="text/template" id="searchFormTemplate">
+			<div class="input-group">
+			  <input type="text" class="form-control" id="searchQuery" value="<%=query %>" placeholder="Búsqueda">
+			  <span class="input-group-addon"><img src="img/search.ico" /></span>
+			</div>
+		</script>
+		
+		<script type="text/template" id="videoResultsTemplate">
+			<% 
+			_.each(videos, function(video, key){
+				video = new Video(video);
+				Youtube.videos.add(video)
+			%>
+				<div class="video">
+					<div class="image"><a href=""><img src="<%=video.getImage() %>" /></a></div>
+					<div class="info">
+						<div class="title"><a href="#/view/<%=video.getID() %>"><%=video.getTitle() %></a></div>
+						<div class="metadata">de <a href="#" class="author"><%=video.getAuthor() %></a> - <%=video.getPublishDate() %> - <%=video.getViews() %> reproducciones</div>
+						<div class="description"><%=video.getDescription() %></div>
+					</div>
+				</div>
+			<% }) %>
+		</script>
+		
+		<script type="text/template" id="watchVideoTemplate">
+			<div class="close">X</div>
+			<h2 class="title"><%=video.getTitle() %></h2>
+			<div class="player">
+				<iframe width="420" height="315" src="//www.youtube.com/embed/<%=video.getID() %>" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<div class="info">
+				<div class="description">
+					<span>Descripción</span>
+					<%=video.getDescription() %>
+				</div>
+				<div id="downloadLinks" class="download-links"></div>
+			</div>
+			
+		</script>
+		
+		<script type="text/template" id="downloadLinksTemplate">
+			<span>Enlaces de Descarga</span>
+			<% _.each(downloadLinks, function(links, format){ %>
+				<% _.each(links, function(url, type){ %>
+				<div class="download-link"><a href="<%=url %>" download="<%=title %>.<%=format.toLowerCase() %>"><%=format %> - <%=type %></a></div>
+				<% }); %>
+			<% }) %>
+		</script>
+		
+		<div id="wrapper">
+			<div id="searchForm"></div>
+			<div id="videoResults"></div>
+			<div id="watchVideo"></div>
+		</div>
+	</body>
+</html>

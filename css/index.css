@@ -1,0 +1,97 @@
+body {
+  font-family: Arial;
+  font-size: 12px;
+}
+body a {
+  color: #004080;
+}
+body #wrapper {
+  width: 700px;
+  margin: 10px auto;
+  border: 1px solid #D9E0E7;
+}
+body #wrapper #searchForm {
+  background: #F0F1F2;
+  padding: 5px 5px;
+}
+body #wrapper #watchVideo {
+  display: none;
+  position: fixed;
+  top: 10px;
+  border: 3px solid #D9E0E7;
+  background: #fff;
+  width: 700px;
+  padding: 0 20px 20px 20px;
+}
+body #wrapper #watchVideo .close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 5px 10px;
+  background: #F0F1F2;
+  border-left: 1px solid #D9E0E7;
+  border-bottom: 1px solid #D9E0E7;
+  cursor: pointer;
+  font-weight: bold;
+}
+body #wrapper #watchVideo .close:hover {
+  background: #fff;
+}
+body #wrapper #watchVideo h2.title {
+  text-align: center;
+}
+body #wrapper #watchVideo .player {
+  padding: 0 10px;
+}
+body #wrapper #watchVideo .player iframe {
+  width: 100%;
+}
+body #wrapper #watchVideo .info {
+  margin-top: 10px;
+}
+body #wrapper #watchVideo .info .description {
+  display: inline-block;
+  width: 450px;
+  vertical-align: top;
+}
+body #wrapper #watchVideo .info .download-links {
+  display: inline-block;
+  width: 170px;
+  vertical-align: top;
+  margin-left: 30px;
+}
+body #wrapper #watchVideo .info .download-links a {
+  font-size: 11px;
+}
+body #wrapper #watchVideo .info span {
+  font-weight: bold;
+  display: block;
+}
+body #wrapper #videoResults .video {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+body #wrapper #videoResults .video .image {
+  display: inline-block;
+  text-align: center;
+  width: 190px;
+}
+body #wrapper #videoResults .video .image img {
+  width: 185px;
+}
+body #wrapper #videoResults .video .info {
+  display: inline-block;
+  width: 470px;
+  margin-left: 5px;
+  vertical-align: top;
+}
+body #wrapper #videoResults .video .info .title a {
+  font-weight: bold;
+}
+body #wrapper #videoResults .video .info .metadata {
+  font-size: 12px;
+}
+body #wrapper #videoResults .video .info .metadata .author {
+  color: #000;
+  font-weight: bold;
+}
